@@ -4,7 +4,7 @@ name: snowflake-devops-demo
 on:
   push:
     branches:
-      - main
+      - [ main, dev ]
     paths:
       - 'sql/**'
 
@@ -24,8 +24,8 @@ jobs:
       - name: Set env to development
         if: endsWith(github.ref, '/dev')
         run: |
-         echo "ENVIRONMENT=dev" >> $GITHUB_ENV
-    
+          echo "ENVIRONMENT=dev" >> $GITHUB_ENV
+
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout repository
         uses: actions/checkout@v2
