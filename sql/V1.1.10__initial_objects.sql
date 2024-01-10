@@ -10,3 +10,4 @@ CREATE OR REPLACE TABLE USERS_TEST
 alter table USERS_TEST add column AGE varchar;
 alter table USERS_TEST add column COUNTRY_NAME varchar;
 alter table USERS_TEST add column CURRENCY varchar;
+alter table USERS_TEST add column USER_ID varchar;
