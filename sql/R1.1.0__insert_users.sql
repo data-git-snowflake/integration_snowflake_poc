@@ -13,3 +13,4 @@ VALUES
    ('Olivia', 'Moore', 'OMoore456'),
    ('William', 'Anderson', 'WAnderson789'),
    ('Sophia', 'Clark', 'SClark321');
+   ('Sophia1', 'Clark2', 'SClark3213');
