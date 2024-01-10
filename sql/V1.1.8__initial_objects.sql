@@ -8,4 +8,4 @@ CREATE OR REPLACE TABLE USERS_TEST
 );
 
 alter table USERS_TEST add column age varchar;
-alter table USERS_TEST add column COUNTRY_NAME_1 varchar;
+alter table USERS_TEST add column COUNTRY_NAME varchar;
