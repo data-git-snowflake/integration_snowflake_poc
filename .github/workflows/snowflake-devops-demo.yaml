@@ -51,4 +51,4 @@ jobs:
           pip install schemachange==3.6.1
           
           echo "Step 2: Running schemachange"
-          schemachange -f $GITHUB_WORKSPACE/sql -a $SF_ACCOUNT -u $SF_USERNAME -r $SF_ROLE -w $SF_WAREHOUSE -d $SF_DATABASE -c $SF_DATABASE.$ENVIRONMENT_TEST.CHANGE_HISTORY --create-change-history-table --vars '{"env_name": "$ENVIRONMENT_test"}'
+          schemachange -f $GITHUB_WORKSPACE/sql -a $SF_ACCOUNT -u $SF_USERNAME -r $SF_ROLE -w $SF_WAREHOUSE -d $SF_DATABASE -c $SF_DATABASE.$ENVIRONMENT_TEST.CHANGE_HISTORY --create-change-history-table --vars '{"env_name": "${{env.ENVIRONMENT}}_test"}'
