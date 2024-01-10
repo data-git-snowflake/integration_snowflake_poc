@@ -16,6 +16,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # set env variables
+      - name: Set env to staging
+        if: endsWith(github.ref, '/main')
+        run: |
+          echo "ENVIRONMENT=prod" >> $GITHUB_ENV
+      - name: Set env to production
+        if: endsWith(github.ref, '/dev')
+        run: |
+         echo "ENVIRONMENT=dev" >> $GITHUB_ENV
+    
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -35,6 +45,7 @@ jobs:
           SNOWFLAKE_PASSWORD: ${{ secrets.SF_PASSWORD }}
         run: |
           echo "GITHUB_WORKSPACE: $GITHUB_WORKSPACE"
+          echo "GITHUB_ENV: $GITHUB_ENV"
           python --version
           echo "Step 1: Installing schemachange"
           pip install schemachange==3.6.1
