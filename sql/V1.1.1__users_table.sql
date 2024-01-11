@@ -24,4 +24,4 @@ VALUES
 ('David', 'Brown', 'DB901', '38', 'Japan', 'JPY', '1007', 'UVW Market'),
 ('Olivia', 'Jones', 'OJ345', '33', 'Brazil', 'BRL', '1008', 'GHI Store'),
 ('Daniel', 'Miller', 'DM567', '27', 'South Africa', 'ZAR', '1009', 'JKL Corner'),
-('Emma', 'Wilson', 'EW123', '31', 'Spain', 'EUR', '1010', 'MNO Mega Mall');
+('Emma', 'Wilson', 'EW123', '31', 'Spain', 'EUR', '1010', 'MNO Mega Mall 1');
